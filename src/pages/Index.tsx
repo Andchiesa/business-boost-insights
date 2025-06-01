@@ -40,23 +40,24 @@ const Index = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+            Seu {" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
-              Decodifique
+              Negócio
             </span>{" "}
-            sua presença{" "}
+            no{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
-              digital
+              Digital
             </span>
             <br />
             <span className="text-2xl md:text-4xl text-gray-300 font-normal">
-              com inteligência artificial
+              com Inteligência Artificial
             </span>
           </h1>
         </div>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-          Análise avançada de Google Meu Negócio, redes sociais, website 
-          e estratégias de marketing digital usando IA de última geração
+          Como identificar o que não está funcionando na sua divulgação 
+          e transformar sua realidade online
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -65,7 +66,7 @@ const Index = () => {
             className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold px-10 py-6 text-lg rounded-2xl shadow-lg shadow-purple-500/25 transform hover:scale-105 transition-all duration-300 border border-purple-500/30"
           >
             <Eye className="w-5 h-5 mr-2" />
-            Iniciar Scan Digital
+            Iniciar Pesquisa Online
           </Button>
           <Button 
             variant="outline" 
@@ -89,7 +90,7 @@ const Index = () => {
               Análise Completa
             </span>
           </h2>
-          <p className="text-gray-400 text-lg">Escaneamos todos os aspectos da sua presença digital</p>
+          <p className="text-gray-400 text-lg">Escaneamos todos os aspectos de como está seu negócio online</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
