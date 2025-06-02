@@ -1,4 +1,45 @@
-// ... tipos anteriores mantidos ...
+export interface Feature {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+  color: 'purple' | 'cyan' | 'pink' | 'blue';
+}
+
+export interface ButtonProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+  variant?: 'default' | 'outline';
+  className?: string;
+  'aria-label'?: string;
+}
+
+export type Language = 'pt' | 'en' | 'es';
+
+export interface FormStep {
+  label: string;
+  placeholder: string;
+  helper: string;
+}
+
+export interface FormTexts {
+  title: string;
+  subtitle: string;
+  steps: FormStep[];
+  segments: string[];
+  validation: {
+    required: string;
+    invalidUrl: string;
+    invalidEmail: string;
+  };
+  loading: {
+    analyzing: string;
+    step1: string;
+    step2: string;
+    step3: string;
+    step4: string;
+  };
+}
 
 export interface AnalysisItem {
   category: string;
@@ -52,9 +93,44 @@ export interface ResultTexts {
   };
 }
 
-// Atualizar TextsStructure para incluir result
 export interface TextsStructure {
-  // ... propriedades anteriores mantidas ...
+  brand: {
+    name: string;
+    tagline: string;
+    logo: string;
+  };
+  hero: {
+    badge: string;
+    title: {
+      part1: string;
+      highlight1: string;
+      part2: string;
+      highlight2: string;
+    };
+    subtitle: string;
+    description: string;
+  };
+  buttons: {
+    startAnalysis: string;
+    viewDemo: string;
+    startNow: string;
+    next: string;
+    previous: string;
+    finish: string;
+  };
+  features: Feature[];
+  cta: {
+    title: string;
+    subtitle: string;
+  };
+  form: FormTexts;
   result: ResultTexts;
 }
 
+export interface BusinessAnalysisData {
+  businessName: string;
+  mainLink: string;
+  segment: string;
+  email: string;
+  timestamp?: string;
+}
