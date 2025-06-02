@@ -73,4 +73,3 @@ const CircularScore: React.FC<CircularScoreProps> = ({
 };
 
 export default CircularScore;
-
