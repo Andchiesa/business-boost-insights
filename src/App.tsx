@@ -1,32 +1,20 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Index from './pages/Index';
+import Analise from './pages/Analise';
+import Resultado from './pages/Resultado';
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import Analise from "./pages/Analise";
-import Relatorio from "./pages/Relatorio";
-import NotFound from "./pages/NotFound";
-
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/analise" element={<Analise />} />
-          <Route path="/relatorio" element={<Relatorio />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/analise" element={<Analise />} />
+      <Route path="/resultado" element={<Resultado />} />
+      {/* Outras rotas futuras */}
+      <Route path="/pricing" element={<div>Página de Pricing em construção...</div>} />
+    </Routes>
+  );
+}
 
 export default App;
+
