@@ -87,4 +87,3 @@ export const useAnalysisSimulator = (businessData: any) => {
 
   return { isLoading, result };
 };
-
