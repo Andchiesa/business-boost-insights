@@ -201,7 +201,8 @@ const BusinessForm: React.FC<BusinessFormProps> = ({ onSubmit }) => {
                 label={texts.form.fields.employeeCount}
                 options={[
                   { value: '1-10', label:
-                    import React, { useState, useEffect } from 'react';
+                    
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useFormValidation } from '../../hooks/useFormValidation';
 import { BusinessAnalysisData } from '../../types';
