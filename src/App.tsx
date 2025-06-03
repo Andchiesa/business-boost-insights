@@ -1,19 +1,32 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Index from './pages/Index';
-import Analise from './pages/Analise';
-import Resultado from './pages/Resultado';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { HomePage, ResultsPage } from './pages';
 
-function App() {
+const ResultsPageWrapper: React.FC = () => {
+  const location = useLocation();
+  const state = location.state as {
+    score: number;
+    strengths: string[];
+    issues: string[];
+  } | undefined;
+
+  if (!state) {
+    // Se não houver dados, redireciona para a home
+    return <Navigate to="/" replace />;
+  }
+
+  return <ResultsPage score={state.score} strengths={state.strengths} issues={state.issues} />;
+};
+
+const App: React.FC = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Index />} />
-      <Route path="/analise" element={<Analise />} />
-      <Route path="/resultado" element={<Resultado />} />
-      {/* Outras rotas futuras */}
-      <Route path="/pricing" element={<div>Página de Pricing em construção...</div>} />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/results" element={<ResultsPageWrapper />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
