@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import CircularScore from '../components/ui/common/CircularScore';
+import CircularScore from '../components/common/CircularScore';
 
 interface ResultsPageProps {
   score: number;
@@ -16,13 +15,13 @@ const ResultsPage: React.FC<ResultsPageProps> = ({ score = 75, strengths = [], i
     <div className="container mx-auto p-4">
       <header className="py-6">
         <h1 className="text-3xl font-bold text-gray-800 text-center">{texts.result.title}</h1>
-        <p className="text-lg text-gray-600 text-center mt-2">{texts.result.subtitle}</p>
+        <p className="text-lg text-gray-600 text-center mt-2">{texts.result.legend}</p>
       </header>
 
       <section className="py-8">
         <div className="text-center">
           <CircularScore score={score} />
-          <p className="mt-4 text-gray-600">{texts.result.score.title}</p>
+          <p className="mt-4 text-gray-600">{texts.result.score}</p>
         </div>
       </section>
 
@@ -30,23 +29,19 @@ const ResultsPage: React.FC<ResultsPageProps> = ({ score = 75, strengths = [], i
         <h2 className="text-2xl font-bold text-gray-800 mb-4">{texts.result.freeAnalysis.title}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h3 className="text-xl font-semibold mb-2">{texts.result.freeAnalysis.strengths.title}</h3>
+            <h3 className="text-xl font-semibold mb-2">{texts.result.freeAnalysis.strengths}</h3>
             <ul>
-              {strengths.length > 0 ? strengths.map((strength, index) => (
+              {strengths.map((strength, index) => (
                 <li key={index} className="text-gray-700">{strength}</li>
-              )) : (
-                <li className="text-gray-500">{texts.result.freeAnalysis.strengths.noStrengths}</li>
-              )}
+              ))}
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-2">{texts.result.freeAnalysis.issues.title}</h3>
+            <h3 className="text-xl font-semibold mb-2">{texts.result.freeAnalysis.issues}</h3>
             <ul>
-              {issues.length > 0 ? issues.map((issue, index) => (
+              {issues.map((issue, index) => (
                 <li key={index} className="text-gray-700">{issue}</li>
-              )) : (
-                <li className="text-gray-500">{texts.result.freeAnalysis.issues.noIssues}</li>
-              )}
+              ))}
             </ul>
           </div>
         </div>
@@ -60,3 +55,4 @@ const ResultsPage: React.FC<ResultsPageProps> = ({ score = 75, strengths = [], i
 };
 
 export default ResultsPage;
+

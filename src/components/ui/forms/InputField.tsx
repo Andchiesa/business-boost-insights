@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { useLanguage } from '../../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 interface InputFieldProps {
   id: string;
@@ -50,3 +49,4 @@ const InputField: React.FC<InputFieldProps> = ({
 };
 
 export default InputField;
+
