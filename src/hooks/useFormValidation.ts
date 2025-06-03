@@ -1,4 +1,5 @@
-import { useLanguage } from '@/contexts/LanguageContext';
+
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const useFormValidation = () => {
   const { texts } = useLanguage();
