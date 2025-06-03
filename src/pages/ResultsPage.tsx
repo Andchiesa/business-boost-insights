@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import CircularScore from '../components/common/CircularScore';
+import CircularScore from '../components/ui/common/CircularScore';
 
 interface ResultsPageProps {
   score: number;
@@ -55,4 +56,3 @@ const ResultsPage: React.FC<ResultsPageProps> = ({ score = 75, strengths = [], i
 };
 
 export default ResultsPage;
-
