@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const AnimatedBackground: React.FC = React.memo(() => {
@@ -13,4 +14,3 @@ const AnimatedBackground: React.FC = React.memo(() => {
 AnimatedBackground.displayName = 'AnimatedBackground';
 
 export default AnimatedBackground;
-
