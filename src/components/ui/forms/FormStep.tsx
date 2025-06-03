@@ -1,6 +1,7 @@
+
 import React from 'react';
-import { useLanguage } from '../../contexts/LanguageContext';
-import { FormStep as FormStepType } from '../../types';
+import { useLanguage } from '../../../contexts/LanguageContext';
+import { FormStep as FormStepType } from '../../../types';
 
 interface FormStepProps {
   currentStep: number;
@@ -69,4 +70,3 @@ const FormStep: React.FC<FormStepProps> = ({ currentStep, steps }) => {
 };
 
 export default FormStep;
-

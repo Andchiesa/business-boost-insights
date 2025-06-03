@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../../contexts/LanguageContext';
-import { useFormValidation } from '../../hooks/useFormValidation';
-import { BusinessAnalysisData } from '../../types';
+import { useLanguage } from '../../../contexts/LanguageContext';
+import { useFormValidation } from '../../../hooks/useFormValidation';
+import { BusinessAnalysisData } from '../../../types';
 import InputField from './InputField';
 import SelectField from './SelectField';
 import CheckboxField from './CheckboxField';
