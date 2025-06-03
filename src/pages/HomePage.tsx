@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BusinessForm } from '../components/forms';
 import { useLanguage } from '../contexts/LanguageContext';
 import AnimatedBackground from '../components/common/AnimatedBackground';
@@ -6,11 +7,22 @@ import FeatureCard from '../components/common/FeatureCard';
 
 const HomePage: React.FC = () => {
   const { texts } = useLanguage();
+  const navigate = useNavigate();
 
   const handleFormSubmit = (data: any) => {
-    // Handle form submission and data processing here
-    console.log('Form data submitted:', data);
-    // Redirect to results page or process data as needed
+    // Simule a análise e gere resultados
+    const simulatedScore = 80;
+    const simulatedStrengths = ['Good social media presence', 'Responsive website'];
+    const simulatedIssues = ['Low SEO ranking', 'No Google Business profile'];
+
+    // Navega para a página de resultados passando os dados
+    navigate('/results', {
+      state: {
+        score: simulatedScore,
+        strengths: simulatedStrengths,
+        issues: simulatedIssues,
+      },
+    });
   };
 
   return (
@@ -45,4 +57,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-
